@@ -5,3 +5,15 @@
 [build.environment]
   NODE_VERSION = "18"
   
+# 反向代理 CORS 资源
+[[redirects]]
+  from = "/notice.txt"
+  to = "https://cos.amiyabot.com/notice.txt"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/resource/*"
+  to = "https://cos.amiyabot.com/resource/:splat"
+  status = 200
+  force = true
