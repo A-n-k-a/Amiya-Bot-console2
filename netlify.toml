@@ -7,13 +7,15 @@
   
 # 反向代理 CORS 资源
 [[redirects]]
-  from = "/notice.txt"
-  to = "https://cos.amiyabot.com/notice.txt"
+  from = "/cos.amiyabot.com/*"
+  to = "https://cos.amiyabot.com/:splat"
   status = 200
-  force = true
+  force = false
+  # 即使 dist 目录下有同名文件，也强制走代理。
 
+# 示例：另一个代理
 [[redirects]]
-  from = "/resource/*"
-  to = "https://cos.amiyabot.com/resource/:splat"
+  from = "/example.anka1.top/*"
+  to = "https://example.anka1.top/:splat"
   status = 200
-  force = true
+  force = false
